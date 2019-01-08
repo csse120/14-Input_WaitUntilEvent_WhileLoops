@@ -61,13 +61,13 @@ def is_prime(n):
             return False
 
     return True
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Students:
     #   Do NOT touch the above  is_prime  function - it has no TO DO.
     #   Do NOT copy code from this function.
     #
     # Instead, ** CALL ** this function as needed in the problems below.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
 
 def run_test_sum_until_prime_input():
@@ -98,22 +98,22 @@ def sum_until_prime_input():
          Enter an integer greater than 1: 11
          The sum of the input integers is: 167
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #   The testing code is already written for you (above).
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
 
 def run_test_next_prime():
     """ Tests the   next_prime    function. """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # TODO: 3. Implement this TEST function.
     #   It TESTS the  wait_for_prime  function defined below.
     #   Include at least  ** 6 **  tests. (We supplied 5 tests for you.)
     #
     #   As usual, include both EXPECTED and ACTUAL results in your test
     #   and compute the latter BY HAND (not by running your program).
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('--------------------------------------------------')
     print('Testing the   next_prime   function:')
@@ -164,7 +164,7 @@ def run_test_next_prime():
     print('Actual:  ', actual)
     print('TEST ENDED!')
 
-    # TO DO 3 (continued):
+    # TODO 3 (continued):
     #   PUT YOUR TEST   ** IN THE SPACE BETWEEN **   the
     #   print('TEST STARTED!' ...) and print('TEST ENDED') lines below.
 
@@ -189,13 +189,13 @@ def next_prime(m):
     Type hints:
       :type m: int
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
     #    -- Use (call) the   is_prime   function above appropriately.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
 
 def run_test_prime_gap():
@@ -322,26 +322,26 @@ def prime_gap(m):
     Type hints:
       :type m: int
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:
     #    -- Use (call) the   *** next_prime ***   function
     #       (that you implemented) appropriately.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
 
 def run_test_wait_for_sum_of_cubes():
     """ Tests the   wait_for_sum_of_cubes    function. """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # TODO: 6. Implement this TEST function.
     #   It TESTS the  wait_for_sum_of_cubes  function defined below.
     #   Include at least  ** 8 **  tests. (We supplied 6 tests for you.)
     #
     #   As usual, include both EXPECTED and ACTUAL results in your test
     #   and compute the latter BY HAND (not by running your program).
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('--------------------------------------------------')
     print('Testing the   wait_for_sum_of_cubes   function:')
@@ -401,7 +401,7 @@ def run_test_wait_for_sum_of_cubes():
     print('Actual:  ', actual)
     print('TEST ENDED!')
 
-    # TO DO 6 (continued):
+    # TODO 6 (continued):
     #   PUT YOUR TEST   ** IN THE SPACE BETWEEN **   the
     #   print('TEST STARTED!' ...) and print('TEST ENDED') lines below.
     #
@@ -414,7 +414,7 @@ def run_test_wait_for_sum_of_cubes():
 
     print('TEST ENDED!')
 
-    # TO DO 6 (continued):
+    # TODO 6 (continued):
     #   PUT YOUR TEST   ** IN THE SPACE BETWEEN **  the
     #   print('TEST STARTED!' ...) and print('TEST ENDED') lines below.
 
@@ -458,7 +458,7 @@ def wait_for_sum_of_cubes(x):
     Type hints:
       :type x: float  [or an int]
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # TODO: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
@@ -467,11 +467,11 @@ def wait_for_sum_of_cubes(x):
     #
     # Note for the mathematically inclined:  One could figure out
     # (or look up) a formula that would allow a faster computation.
-    # But no fair using that in this function.
-    # ------------------------------------------------------------------
+    # But no fair using any such approach in this implementation.
+    # -------------------------------------------------------------------------
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 main()

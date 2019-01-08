@@ -15,14 +15,14 @@ but using the WHILE TRUE pattern for WHILE loops.
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
-# ----------------------------------------------------------------------
+###############################################################################
 # Students: Read and run this program.  There is nothing else
 #           for you to do in here.  Just use it as an example.
 #
 #           Before you leave this example,
 #   *** MAKE SURE YOU UNDERSTAND THE   WAIT-FOR-EVENT   PATTERN,
 #   *** with its use of a    WHILE <condition>:   statement.
-# ----------------------------------------------------------------------
+###############################################################################
 
 import math
 import random
@@ -36,10 +36,10 @@ def main():
     demonstrate_wait_for_small_enough_number()
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Demonstrates waiting for a sequence of "growing" circles
 # to reach the edge of the window in which they are drawn.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def demonstrate_wait_for_circle_to_reach_edge():
     """
     Demonstrates the   wait_for_event   pattern, where the event
@@ -89,9 +89,9 @@ def demonstrate_wait_for_circle_to_reach_edge():
     window.close_on_mouse_click()
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Demonstrates waiting for a "sentinel" value to be input.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def demonstrate_wait_for_sentinel():
     """
     Demonstrates the   wait_for_event   pattern, where the event
@@ -119,10 +119,10 @@ def demonstrate_wait_for_sentinel():
     print('The total of the square roots is', total)
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Demonstrates waiting for a "small enough" random number
 # to be generated.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def demonstrate_wait_for_small_enough_number():
     """
     Demonstrates the   wait_for_event   pattern, by generating
@@ -172,7 +172,7 @@ def wait_for_small_enough_number(small_number, max_number):
     return count
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 main()
