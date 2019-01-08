@@ -11,9 +11,8 @@ the WHILE TRUE pattern:
 See the module that is the COMPANION to this one for the same examples,
 but using the ITCH pattern for WHILE loops.
 
-Authors: David Mutchler, Amanda Stouder, Valerie Galluzzi,
-         Chandan Rupakheti, Katie Dion, Claude Anderson, Delvin Defoe,
-         Curt Clifton, Matt Boutell, and their colleagues.
+Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
+         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
 # ----------------------------------------------------------------------
 # Students: Read and run this program.  There is nothing else
