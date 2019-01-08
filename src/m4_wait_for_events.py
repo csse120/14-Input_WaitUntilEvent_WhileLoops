@@ -2,7 +2,21 @@
 This module lets you practice the WAIT-FOR-EVENT pattern.
 
 See your instructor for whether you should use:
-The ITCH pattern:
+
+-------------------------------------------------------------------------------
+  The WHILE TRUE pattern:
+
+     while True:
+       ...
+       if <event has occurred>:
+           break
+       ...
+-------------------------------------------------------------------------------
+
+or
+
+-------------------------------------------------------------------------------
+  The ITCH pattern:
 
    Initialize as needed so that the CONDITION can be TESTED.
    while <some CONDITION>: # Test the CONDITION, continue WHILE it is true.
@@ -10,16 +24,7 @@ The ITCH pattern:
        ...
        CHange something that (eventually) affects the CONDITION.
          (else otherwise you will be in an infinite loop)
-
-or
-
-The WHILE TRUE pattern:
-
-     while True:
-       ...
-       if <event has occurred>:
-           break
-       ...
+-------------------------------------------------------------------------------
 
 Ultimately you should be comfortable with both approaches.
 
@@ -27,6 +32,8 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
          and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+import math
 
 
 def main():
@@ -49,7 +56,7 @@ def is_prime(n):
       -- is_prime(2)  returns  True
     Note: The algorithm used here is simple and clear but slow.
     """
-    for k in range(2, (n // 2) + 1):
+    for k in range(2, int(math.sqrt(n) + 0.1) + 1):
         if n % k == 0:
             return False
 
