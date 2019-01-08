@@ -39,7 +39,7 @@ Authors: David Mutchler, Mark Hays, Michael Wollowswki, Matt Boutell,
          with thanks to John Zelle for inspiration and hints.
          First completed version: September 2014.
 """
-
+# Added a title instance variable.
 # FIXME (errors):
 #  -- clone() does not really make a copy; it just makes a new one
 #     but without cloning all the attributes.
@@ -197,7 +197,8 @@ class RoseWindow(object):
         self.toplevel = tkinter.Toplevel(_master_Tk,
                                          background=color,
                                          width=width, height=height)
-        self.toplevel.title(title)
+        self.title = '' + title + ''
+        self.toplevel.title('' + self.title + '')
         self._is_closed = False
         self.toplevel.protocol("WM_DELETE_WINDOW", self.close)
 
@@ -1306,7 +1307,7 @@ class Point(_Shape, _ShapeWithOutline):
 
     def __repr__(self):
         """ Returns a string representation of this Point. """
-        return 'Point({:.1f}, {:.1f})'.format(self.x, self.y)
+        return 'Point({:.0f}, {:.0f})'.format(self.x, self.y)
 
     def clone(self):
         """ Returns a copy of this Point. """
