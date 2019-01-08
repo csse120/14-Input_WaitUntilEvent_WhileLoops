@@ -172,8 +172,6 @@ def wait_for_small_enough_number(small_number, max_number):
 
 
 # ----------------------------------------------------------------------
-# If this module is running at the top level (as opposed to being
-# imported by another module), then call the 'main' function.
+# Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
-if __name__ == '__main__':
-    main()
+main()
