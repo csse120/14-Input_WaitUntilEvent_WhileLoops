@@ -178,12 +178,12 @@ def run_test_next_prime():
 def next_prime(m):
     """
     What comes in:  An integer   m   that is at least 2.
-    What goes out:  Returns the smallest integer greeater than
-       or equal to   m   that is prime.
+    What goes out:  Returns the smallest prime number greater than
+       or equal to   m.
     Side effects:   None.
     Examples:
-      -- next_prime(7)  returns  7
-      -- next_prime(8)  returns  11
+      -- next_prime(7)   returns   7
+      -- next_prime(8)   returns  11
       -- next_prime(80)  returns  83
       -- next_prime(155921)  returns  156007  [trust me!]
     Type hints:
@@ -303,21 +303,25 @@ def prime_gap(m):
        Returns the smallest prime number whose "gap" is at least m,
        where the "gap" of a prime number is the difference between
        that prime number and the next-smallest prime number.
-       to   m   that is prime.
     Side effects:   None.
     Examples:
-      -- prime_gap(1) returns 2, because the gap for 2
-           is 3 - 2 = 1, and 2 is the smallest prime with gap 1.
-      -- prime_gap(2) returns 3, because the gap for 3
-           is 5 - 3 = 2, and 3 is the smallest prime with gap 2.
-      -- prime_gap(3) returns 7, because the gap for 7
-           is 11 - 7 = 4, and 7 is the smallest prime with gap
-           3 or more.
+      -- prime_gap(1) returns 2, because the next prime after 2 is 3,
+           and so the gap for 2 is 3 - 2 = 1,
+           and 2 is the smallest prime with gap 1.
+      -- prime_gap(2) returns 3, because the next prime after 3 is 5,
+           and so the gap for 3 is 5 - 3 = 2,
+           and 3 is the smallest prime with gap 2.
+      -- prime_gap(3) returns 7, because the next prime after 7 is 11,
+           and so the gap for 7 is 11 - 7 = 4,
+           and 7 is the smallest prime with gap 3 or more.
+           (Note: There are no primes except 2 that have a gap that is odd.)
       -- prime_gap(4) returns 7 for similar reasons.
-      -- prime_gap(6) returns 23, because the gap for 23
-           is 29 - 23 = 6, and 23 is the smallest prime with gap 6.
-      -- prime_gap(8) returns 89, because the gap for 89
-           is 97 - 89 = 8, and 89 is the smallest prime with gap 8.
+      -- prime_gap(6) returns 23, because the next prime after 23 is 29,
+           and so the gap for 23 is 29 - 23 = 6,
+           and 23 is the smallest prime with gap 6.
+      -- prime_gap(8) returns 89, because the next prime after 89 is 97,
+           and so the gap for 89 is 97 - 89 = 8,
+           and 89 is the smallest prime with gap 8.
       -- prime_gap(52)  returns  19609  [trust me!]
     Type hints:
       :type m: int
