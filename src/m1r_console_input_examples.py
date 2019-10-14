@@ -14,15 +14,15 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   putting your answers RIGHT HERE IN THIS DOCUMENT.
 #
 #   1. Write a line of code that would input an INTEGER from the
-#      console, storing the integer in a variable called 'x'.
+#      console, storing the integer in a variable called 'm'.
 #      Write your line here:
 #
-#   2. Write a line of code that would input an FLOAT from the console,
-#      storing the float in a variable called 'x'.
+#   2. Write a line of code that would input a FLOAT from the console,
+#      storing the float in a variable called 'f'.
 #      Write your line here:
 #
 #   3. Write a line of code that would input an STRING from the console,
-#      storing the string in a variable called 'x'.
+#      storing the string in a variable called 's'.
 #      Write your line here:
 #
 #   4. What happens if you (the user) enter something OTHER than a
@@ -38,9 +38,9 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #      Put your answer here:
 #
 #   After you have PUT YOUR ANSWERS IN THIS COMMENT as described above,
-#     a. Find someone who has had HER answer checked.
-#        Ask her to check YOUR answers to the above.
-#     b. Change the above TO DO to DONE.
+#     a. Find someone who has had THEIR answer checked.
+#     b. Ask THEM to check YOUR answers to the above.
+#     c. Change the above _TODO_ to DONE.
 #
 #   As always, ask questions as needed!
 ###############################################################################
