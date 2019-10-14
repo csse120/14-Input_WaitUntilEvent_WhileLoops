@@ -17,10 +17,60 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# Students: Read and run this program.  There is nothing else
-#           for you to do in here.  Just use it as an example.
-#
-#           Before you leave this example,
+# TODO: 2.  Read and run this program.  Then do the following problems,
+#   putting your answers RIGHT HERE IN THIS DOCUMENT.
+#  __
+#   1. True or False?  Write your answer here: _______
+#      In the approach demonstrated in this module, all the loops begin with:
+#         while True:
+#  __
+#   2. What 5-letter word causes the program to break out of a loop
+#      and continue execution below the loop?
+#          Write your answer here: ______
+#  __
+#   3. True or False?  Write your answer here: _______
+#      A  break  statement works in a  FOR   loop as well as in a  WHILE  loop.
+#  __
+#   4. Run and read the code below for:
+#            demonstrate_wait_for_circle_to_reach_edge.
+#      Where in the loop are the   IF and break   statements:
+#      Choose your answer from:
+#          -- At the beginning of the loop
+#          -- In the middle of the loop
+#          -- At the end of the loop
+#  __
+#   5. Is   demonstrate_wait_for_circle_to_reach_edge   100% clear to you?
+#        Yes or No?     [If No, ASK FOR HELP NOW!]
+#  __
+#   6. Run and read the code below for:
+#            demonstrate_wait_for_sentinel.
+#      What number is used as the SENTINEL in that function? ________
+#  __
+#   7. Is the concept of a SENTINEL and the code for
+#      demonstrate_wait_for_sentinel   100% clear to you?
+#        Yes or No?     [If No, ASK FOR HELP NOW!]
+#  __
+#   8. Run and read the code below for:
+#            wait_for_small_enough_number.
+#      Where in the loop are the   IF and break   statements:
+#      Choose your answer from:
+#          -- At the beginning of the loop
+#          -- In the middle of the loop
+#          -- At the end of the loop
+#  __
+#   9. Is   wait_for_small_enough_number   100% clear to you?
+#        Yes or No?     [If No, ASK FOR HELP NOW!]
+#  __
+#   After you have PUT YOUR ANSWERS IN THIS COMMENT as described above,
+#     a. Find someone who has had THEIR answer checked.
+#     b. Ask THEM to check YOUR answers to the above.
+#     c. Change the above _TODO_ to DONE.
+#  __
+#   As always, ask questions as needed!
+###############################################################################
+
+###############################################################################
+# Students: Before you leave these examples,
 #   *** MAKE SURE YOU UNDERSTAND THE   WAIT-FOR-EVENT   PATTERN,
 #   *** with its use of   while True:   and   break.
 ###############################################################################
@@ -136,7 +186,7 @@ def demonstrate_wait_for_small_enough_number():
     print('  randomly generated number')
     print('----------------------------------------------------------')
 
-    print('I will now genenerate random integers')
+    print('I will now generate random integers')
     print('between 1 and 50, stopping when a generated')
     print('random integer is less than or equal to 10.')
     print()
@@ -165,7 +215,7 @@ def wait_for_small_enough_number(small_number, max_number):
     while True:
         count = count + 1
         number = random.randrange(1, max_number + 1)
-        print(number)
+        print("   Randomly generated number: {}".format(number))
         if number <= small_number:
             break
 
