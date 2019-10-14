@@ -12,19 +12,19 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 # TODO: 2.  Read and run this program.  Then do the following problems,
 #   putting your answers RIGHT HERE IN THIS DOCUMENT.
-#
+#  __
 #   1. Write a line of code that would input an INTEGER from the
 #      console, storing the integer in a variable called 'm'.
 #      Write your line here:
-#
+#  __
 #   2. Write a line of code that would input a FLOAT from the console,
 #      storing the float in a variable called 'f'.
 #      Write your line here:
-#
+#  __
 #   3. Write a line of code that would input an STRING from the console,
 #      storing the string in a variable called 's'.
 #      Write your line here:
-#
+#  __
 #   4. What happens if you (the user) enter something OTHER than a
 #      single integer (e.g., you enter
 #        five
@@ -36,12 +36,12 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #        nothing at all (just press the Enter key)
 #      -- try them!) when running the   input_an_integer   example?
 #      Put your answer here:
-#
+#  __
 #   After you have PUT YOUR ANSWERS IN THIS COMMENT as described above,
 #     a. Find someone who has had THEIR answer checked.
 #     b. Ask THEM to check YOUR answers to the above.
 #     c. Change the above _TODO_ to DONE.
-#
+#  __
 #   As always, ask questions as needed!
 ###############################################################################
 
