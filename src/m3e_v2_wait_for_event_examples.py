@@ -13,7 +13,7 @@ See the module that is the COMPANION to this one for the same examples,
 but using the WHILE TRUE pattern for WHILE loops.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
+         Mark Hays, Amanda Stouder, Derek Whitley, and their colleagues.
 """
 ###############################################################################
 # Students: Read and run this program.  There is nothing else
