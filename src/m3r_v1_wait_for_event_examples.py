@@ -1,27 +1,28 @@
 """
 This module demonstrates the WAIT-FOR-EVENT pattern using
-the ITCH pattern:
+the WHILE TRUE pattern:
 
-   Initialize as needed so that the CONDITION can be TESTED.
-   while <some CONDITION>: # Test the CONDITION, continue WHILE it is true.
+   while True:
        ...
+       if <event has occurred>:
+           break
        ...
-       CHange something that (eventually) affects the CONDITION.
-         (else otherwise you will be in an infinite loop)
 
 See the module that is the COMPANION to this one for the same examples,
-but using the WHILE TRUE pattern for WHILE loops.
+but using the ITCH pattern for WHILE loops.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Mark Hays, Amanda Stouder, Derek Whitley, and their colleagues.
-"""
+         Mark Hays, Amanda Stouder, Derek Whitley, their colleagues,
+         and PUT_YOUR_NAME_HERE.
+"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
 ###############################################################################
 # Students: Read and run this program.  There is nothing else
 #           for you to do in here.  Just use it as an example.
 #
 #           Before you leave this example,
 #   *** MAKE SURE YOU UNDERSTAND THE   WAIT-FOR-EVENT   PATTERN,
-#   *** with its use of a    WHILE <condition>:   statement.
+#   *** with its use of   while True:   and   break.
 ###############################################################################
 
 import math
@@ -62,25 +63,25 @@ def demonstrate_wait_for_circle_to_reach_edge():
     k = 0
     window.continue_on_mouse_click()
 
-    # If the circle has reached a right/bottom border of the window,
-    # exit the loop
-    right_edge = x + radius
-    bottom_edge = y + radius
-
-    while right_edge < window.width and bottom_edge < window.height:
+    while True:
         # Construct and draw a purple circle.
         circle = rg.Circle(rg.Point(x, y), radius)
         circle.fill_color = 'purple'
         circle.attach_to(window)
+
+        # If the circle has reached a right/bottom border of the window,
+        # break out of the loop
+        right_edge = x + radius
+        bottom_edge = y + radius
+
+        if right_edge >= window.width or bottom_edge >= window.height:
+            break
 
         # Make the next circle be down, to the right, and bigger.
         k = k + 1
         x = x + 2
         y = y + 1
         radius = radius + (k / 100)
-
-        right_edge = x + radius
-        bottom_edge = y + radius
 
         # Render.  Allow a little time to elapse,
         #          else the animation flashes by.
@@ -108,20 +109,19 @@ def demonstrate_wait_for_sentinel():
     print('----------------------------------------------')
 
     total = 0
-    number = int(input('Enter a positive integer, or -1 to quit: '))
-    while number != -1:
+    while True:
+        number = int(input('Enter a positive integer, or -1 to quit: '))
+        if number == -1:
+            break
         print('The square root of', number, 'is', math.sqrt(number))
         print()
         total = total + math.sqrt(number)
-
-        number = int(input('Enter a positive integer, or -1 to quit: '))
 
     print('The total of the square roots is', total)
 
 
 # -----------------------------------------------------------------------------
-# Demonstrates waiting for a "small enough" random number
-# to be generated.
+# Demonstrates waiting for a "small enough" random number to be generated.
 # -----------------------------------------------------------------------------
 def demonstrate_wait_for_small_enough_number():
     """
@@ -161,13 +161,13 @@ def wait_for_small_enough_number(small_number, max_number):
            small_number, where small_number is the first given integer.
       -- Prints the random numbers as they are generated.
     """
-    number = random.randrange(1, max_number + 1)
-    print(number)
-    count = 1
-    while number > small_number:
+    count = 0
+    while True:
+        count = count + 1
         number = random.randrange(1, max_number + 1)
         print(number)
-        count = count + 1
+        if number <= small_number:
+            break
 
     return count
 
