@@ -774,7 +774,7 @@ def run_test_wait_for_sum_of_cubes():
     # -------------------------------------------------------------------------
     # TODO: 8. Implement this TEST function.
     #   It TESTS the  wait_for_sum_of_cubes  function defined below.
-    #   Include at least  ** 19 **  tests. (We supplied 18 tests for you.)
+    #   Include at least  ** 20 **  tests. (We supplied 18 tests for you.)
     #  __
     #   As usual, include both EXPECTED and ACTUAL results in your test
     #   and compute the latter BY HAND (not by running your program).
