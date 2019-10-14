@@ -18,6 +18,20 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
+# TODO: 2.  Read and run this program.  Then do the following problems,
+#   putting your answers RIGHT HERE IN THIS DOCUMENT.
+#  __
+#   1. Which version of   demonstrate_wait_for_sentinel  feels clearer to you?
+#        -- The version in this module, or
+#        -- The version in the previous module
+#   Note: reasonable people could disagree on the answer to this question.
+#  __
+#   2. Can you READ and TRACE-BY-HAND   while CONDITION:   loops,
+#        as exemplified in this module?
+#        Yes or No?     [If No, ASK FOR HELP NOW!]
+###############################################################################
+
+###############################################################################
 # Students: Read and run this program.  There is nothing else
 #           for you to do in here.  Just use it as an example.
 #
@@ -112,10 +126,9 @@ def demonstrate_wait_for_sentinel():
     total = 0
     number = int(input('Enter a positive integer, or -1 to quit: '))
     while number != -1:
-        print('The square root of', number, 'is', math.sqrt(number))
-        print()
+        print('The square root of {} is about {:0.5f}.\n'.
+              format(number, math.sqrt(number)))
         total = total + math.sqrt(number)
-
         number = int(input('Enter a positive integer, or -1 to quit: '))
 
     print('The total of the square roots is', total)
