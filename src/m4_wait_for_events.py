@@ -22,11 +22,15 @@ import time
 
 def main():
     """ Calls the   TEST   functions in this module. """
+    print()
+    print("Un-comment and re-comment calls in MAIN one by one as you work.")
+    print()
+
     # run_test_sum_until_prime_input()
     # run_test_next_prime()
     # run_test_sum_to_next_prime()
     # run_test_prime_gap()
-    run_test_wait_for_sum_of_cubes()
+    # run_test_wait_for_sum_of_cubes()
 
 
 def is_prime(n):
@@ -770,8 +774,8 @@ def run_test_wait_for_sum_of_cubes():
     # -------------------------------------------------------------------------
     # TODO: 8. Implement this TEST function.
     #   It TESTS the  wait_for_sum_of_cubes  function defined below.
-    #   Include at least  ** 8 **  tests. (We supplied 6 tests for you.)
-    #
+    #   Include at least  ** 19 **  tests. (We supplied 18 tests for you.)
+    #  __
     #   As usual, include both EXPECTED and ACTUAL results in your test
     #   and compute the latter BY HAND (not by running your program).
     # -------------------------------------------------------------------------
@@ -949,13 +953,14 @@ def run_test_wait_for_sum_of_cubes():
     print_actual_result_of_test(expected, actual, test_results)
     print('TEST ENDED!')
 
+    # -------------------------------------------------------------------------
     # TODO: 8 (continued):
     #   PUT YOUR TEST   ** IN THE SPACE BETWEEN **   the
     #   print('TEST STARTED!' ...) and print('TEST ENDED') lines below.
     #  __
     #  *** Use   wait_for_sum_of_cubes(30.33)   as your test here.
     #  Compute the expected answer BY HAND, as always.
-
+    # -------------------------------------------------------------------------
     # Test 19:
     print()
     print('TEST STARTED!  Has it ended?')
@@ -1011,7 +1016,7 @@ def wait_for_sum_of_cubes(x):
       :type x: float  [or an int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # TODO: 9. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #  __
     #  IMPLEMENTATION REQUIREMENT:
