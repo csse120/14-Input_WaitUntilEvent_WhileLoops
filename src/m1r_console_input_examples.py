@@ -62,9 +62,9 @@ def input_a_string():
     print('Demonstrating  CONSOLE INPUT   of a STRING:')
     print('--------------------------------------------------')
 
-    #----------- Using the   INPUT  function ----------------------------------
+    # ----------- Using the   INPUT  function ---------------------------------
     name = input('Enter your name: ')
-    #--------------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
     print('Hi, ' + name + '!  ', name, '!.  ', name)
     print('  Sorry, I have the hiccups...')
@@ -79,9 +79,9 @@ def input_an_integer():
     print('Demonstrating  CONSOLE INPUT   of an INTEGER:')
     print('--------------------------------------------------')
 
-    #----------- Using the   INPUT  and   INT   functions ---------------------
+    # ----------- Using the   INPUT  and   INT   functions --------------------
     age = int(input('How old are you? '))
-    #--------------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print('That is ' + str(age * 12) + ' months!')
     if age >= 18:
         print('You are old enough to vote, nice!')
@@ -98,9 +98,9 @@ def input_a_float():
     print('Demonstrating  CONSOLE INPUT   of a FLOATING POINT number:')
     print('--------------------------------------------------')
 
-    #----------- Using the   INPUT  and   FLOAT   functions -------------------
+    # ----------- Using the   INPUT  and   FLOAT   functions ------------------
     money = float(input('How much money do you have? '))
-    #--------------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
     potatoes_today = round((money / 6.46) * 10)
     potatoes_1900 = round((money / 0.140) * 10)
