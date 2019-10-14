@@ -61,6 +61,10 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   9. Is   wait_for_small_enough_number   100% clear to you?
 #        Yes or No?     [If No, ASK FOR HELP NOW!]
 #  __
+#  10. Read the comment about   random.seed(...)   that begins at about
+#      line number 87 below.  Do you understand what  random.seed(...) does?
+#        Yes or No?     [If No, ASK FOR HELP NOW!]
+#  __
 #   After you have PUT YOUR ANSWERS IN THIS COMMENT as described above,
 #     a. Find someone who has had THEIR answer checked.
 #     b. Ask THEM to check YOUR answers to the above.
@@ -77,7 +81,21 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 import math
 import random
+import time
 import rosegraphics as rg
+
+# -----------------------------------------------------------------------------
+# There are two   random.seed(...)   statements below.
+#   -- The first (commented out) initializes the pseudo-random number generator
+#        to a fixed starting place.  Hence, the random numbers generated
+#        will be the same in each run of the file, if that form were used.
+#   -- The second form initializes the pseudo-random number generator
+#        to a more-or-less random starting place, based on the time at which
+#        this program runs.  Hence, the random numbers generated
+#        will be different from one run of this program to another.
+# -----------------------------------------------------------------------------
+# random.seed(12)  # The number  12   was picked arbitrarily.
+random.seed((time.time() * 100) % 1000)
 
 
 def main():
@@ -85,6 +103,9 @@ def main():
     demonstrate_wait_for_circle_to_reach_edge()
     demonstrate_wait_for_sentinel()
     demonstrate_wait_for_small_enough_number()
+
+    # The rest of  main  is just for fun, for those interested:
+    just_for_fun_long_waits()
 
 
 # -----------------------------------------------------------------------------
@@ -198,7 +219,7 @@ def demonstrate_wait_for_small_enough_number():
     print('before one was less than or equal to 10.')
 
 
-def wait_for_small_enough_number(small_number, max_number):
+def wait_for_small_enough_number(small_number, max_number, print_it=True):
     """
     What comes in:  Two non-negative integers.
     What goes out:
@@ -215,11 +236,64 @@ def wait_for_small_enough_number(small_number, max_number):
     while True:
         count = count + 1
         number = random.randrange(1, max_number + 1)
-        print("   Randomly generated number: {}".format(number))
+        if print_it:
+            print("   Randomly generated number: {}".format(number))
         if number <= small_number:
             break
 
     return count
+
+
+# -----------------------------------------------------------------------------
+# Demonstrates more waiting for events, this time waiting
+# for statistically unlikely events.
+# -----------------------------------------------------------------------------
+def just_for_fun_long_waits():
+    """
+    Demonstrates how long you have to wait for statistically unlikely events.
+    """
+    print('Modify the first few lines in just_for_fun_long_waits')
+    print('if you want to play around with statistics.')
+    iterations_asked_for = 60
+    probability_required = 0.2
+    max_number = 50
+    count = waiting_again(round(max_number * probability_required),
+                          max_number, iterations_asked_for)
+
+    print('{} calls to  wait_for_small_enough_number'.format(count))
+    print('   were required for  wait_for_small_enough_number  to do')
+    print('{} iterations before the "waited for" event occurred,'.
+          format(iterations_asked_for))
+    print('   where the event occurs with probability')
+    print('{:0.2f}'.format(probability_required))
+
+
+def waiting_again(small_number, max_number, number_of_numbers):
+    """
+    What comes in:  Three non-negative integers.
+    What goes out:
+      Calls   wait_for_small_enough_number   repeatedly, using the first
+      two arguments to this function as arguments in the call.
+      Each call returns a number  N  that is the number of numbers generated
+      randomly by the call.  This function waits until a call returns a value
+      Returns the number of calls required to achieve that result.
+    Side effects:
+      -- Per wait_for_small_enough_number.
+    """
+    print()
+    print('----------------------------------------------------------')
+    print('Demonstrating WAIT FOR AN UNLIKELY EVENT, namely,')
+    print('that it requires a lot of calls to')
+    print('  wait_for_small_enough_number')
+    print('for a call that took a lot of iterations before returning.')
+    print('----------------------------------------------------------')
+    count = 0
+    while True:
+        count = count + 1
+        n = wait_for_small_enough_number(small_number, max_number,
+                                         print_it=False)
+        if n >= number_of_numbers:
+            return count  # Note that RETURN can sometimes substitute for BREAK
 
 
 # -----------------------------------------------------------------------------
