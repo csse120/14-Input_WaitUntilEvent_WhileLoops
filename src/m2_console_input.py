@@ -21,12 +21,11 @@ def double_a_float():
     What goes out: Nothing (i.e. None)
     Side effects:
        a. Prompts the user for and inputs a floating point number.
-       b. Prints the input number, doubled (i.e., multiplied by 2).
-    No input validation is required.  Nothing else should be printed.
+       b. Prints the input number, but doubled (i.e., multiplied by 2).
+    No input validation is required.  ** Nothing else should be printed. **
 
     Example:
-    Here is a sample run, where the user input is to the right
-    of the colon:
+    Here is a sample run, where the user input is to the right of the colon:
          Enter a number: -3.14
          -6.28
     """
@@ -42,13 +41,12 @@ def print_an_integer_many_times():
     What goes out: Nothing (i.e. None)
     Side effects:
        a. Prompts the user for and inputs a positive integer.
-       b. Prints the input integer, doubled (i.e., multiplied by 2),
+       b. Prints the input integer, but doubled (i.e., multiplied by 2),
           the input number of times.  (See the example.)
-    No input validation is required.  Nothing else should be printed.
+    No input validation is required.  ** Nothing else should be printed. **
 
     Example:
-    Here are two sample runs, where the user input is to the right
-    of the colon:
+    Here are two sample runs, where user input is to the right of the colon:
          Enter an integer: 3
          6
          6
@@ -83,9 +81,9 @@ def print_an_integer_many_times_on_one_row():
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #   The testing code is already written for you (above).
-    #
-    # HINT: One way to print on a SINGLE line is to build up a string
-    #       and then print that (single) string.
+    #  __
+    #  HINT: One way to print on a SINGLE line is to build up a string
+    #        and then print that (single) string.
     # -------------------------------------------------------------------------
 
 
@@ -103,7 +101,7 @@ def input_it_all():
         a. The square root of the floating point number,
            repeated the input integer number of times.
         b. The string, repeated the input integer number of times.
-      No input validation is required.  Nothing else should be printed.
+      No input validation is required.  ** Nothing else should be printed. **
 
     Example:
     Here is a sample run, where the user input is to the right
@@ -123,6 +121,9 @@ def input_it_all():
     # -------------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   The testing code is already written for you (above).
+    #  __
+    #  HINT: If you add an  import math   statement, put it at the BEGINNING
+    #        of this module, NOT ** INSIDE ** the definition of this function.
     # -------------------------------------------------------------------------
 
 
