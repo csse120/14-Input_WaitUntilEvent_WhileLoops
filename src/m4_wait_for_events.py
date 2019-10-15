@@ -269,11 +269,6 @@ def next_prime(m):
     #  IMPLEMENTATION REQUIREMENT:
     #    -- Use (call) the   is_prime   function above appropriately.
     # -------------------------------------------------------------------------
-    maybe_prime = m + 1
-    while True:
-        if is_prime(maybe_prime):
-            return maybe_prime
-        maybe_prime = maybe_prime + 1
 
 
 def run_test_sum_to_next_prime():
@@ -453,13 +448,6 @@ def sum_to_next_prime(m):
     #         and then doing appropriate summing, do NOT use that solution
     #         (so that you get more practice at the  wait-until  pattern).
     # -------------------------------------------------------------------------
-    maybe_prime = m + 1
-    total = m
-    while True:
-        total = total + maybe_prime
-        if is_prime(maybe_prime):
-            return total
-        maybe_prime = maybe_prime + 1
 
 
 def run_test_prime_gap():
@@ -761,12 +749,6 @@ def prime_gap(gap):
     #         on your computer.  If they take longer (or never complete),
     #         then you are probably not using   next_prime   correctly.
     # -------------------------------------------------------------------------
-    p = 2
-    while True:
-        next_p = next_prime(p)
-        if next_p - p >= gap:
-            return p
-        p = next_p
 
 
 def run_test_wait_for_sum_of_cubes():
@@ -882,6 +864,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 11:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 5
     print_expected_result_of_test([100.00000001], expected, test_results,
@@ -891,6 +874,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 12:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 8
     print_expected_result_of_test([1000], expected, test_results,
@@ -900,6 +884,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 13:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 1
     print_expected_result_of_test([-4.2], expected, test_results,
@@ -909,6 +894,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 14:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 8
     print_expected_result_of_test([1296], expected, test_results,
@@ -918,6 +904,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 15:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 9
     print_expected_result_of_test([1296.00000001], expected, test_results,
@@ -927,6 +914,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 16:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 25
     print_expected_result_of_test([100000], expected, test_results,
@@ -936,6 +924,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 17:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 38
     print_expected_result_of_test([500000], expected, test_results,
@@ -945,6 +934,7 @@ def run_test_wait_for_sum_of_cubes():
     print('TEST ENDED!')
 
     # Test 18:
+    print()
     print('TEST STARTED!  Has it ended?')
     expected = 251
     print_expected_result_of_test([1000000000], expected, test_results,
@@ -1026,13 +1016,6 @@ def wait_for_sum_of_cubes(x):
     #  (or look up) a formula that would allow a faster computation.
     #  But no fair using any such approach in this implementation.
     # -------------------------------------------------------------------------
-    n = 1
-    total = 1
-    while True:
-        if total >= x:
-            return n
-        n = n + 1
-        total = total + (n ** 3)
 
 
 ###############################################################################
